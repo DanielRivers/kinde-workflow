@@ -26,7 +26,7 @@ export default async (event: onUserTokenGeneratedEvent) => {
     );
 
     const accessToken = accessTokenCustomClaims<{ hello: string; settings: string; permissions: []}>();
-    accessToken.hello = "Hello there again Hello London!";
+    accessToken.hello = "We hate Australia!";
     accessToken.settings = settings.output
     accessToken.permissions =  res.json.permissions.filter((p) => !excludedPermissions.includes(p.key))
   }
