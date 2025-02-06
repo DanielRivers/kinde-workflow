@@ -13,8 +13,7 @@ export const workflowSettings: WorkflowSettings = {
   }
 };
 
-export default {
-  async handle(event: onUserTokenGeneratedEvent) {
+export default async (event: onUserTokenGeneratedEvent) => {
     const excludedPermissions = ['payments:create'];
     
     const orgCode = event.context.organization.code;
@@ -31,4 +30,3 @@ export default {
     accessToken.settings = settings.output
     accessToken.permissions =  res.json.permissions.filter((p) => !excludedPermissions.includes(p.key))
   }
-}
