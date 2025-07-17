@@ -1,13 +1,11 @@
 import React from 'react';
 
-export const PageSettings = {
-  portalSettings: {
+export const portalPageSettings = {
     menuIcon: 'dashboard',
     menuLabel: 'Dashboard',
     uniqueId: 'dashboard',
     roles: ['admin', 'manager'],
     order: 1
-  }
 };
 
 const Dashboard: React.FC = () => {
